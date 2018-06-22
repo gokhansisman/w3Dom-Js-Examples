@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Hello World!</p>
+
+<div id="main">
+    <p>The Dom is very useful.</p>
+     <p>This example demonstrates the <b>
+         getElementsByTagName
+     </b>Method</p>
+</div>
+<p id ="demo"></p>
+<script>
+var x=document.getElementById("main");
+var y=x.getElementsByTagName("p");
+document.getElementById("demo").innerHTML=
+'The first paragraph (index 0) inside "main" is :' + y[1].innerHTML;
+//main id içinde ki p taglarını bir diziye aktarır.
+</script>
+    </body>
+</html>

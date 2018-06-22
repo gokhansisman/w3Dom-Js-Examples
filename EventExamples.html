@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<style>
+    #renklendir{
+        background-color: blue;
+        size:24px;
+        padding:5px;
+    }
+</style>
+    <body>
+
+    
+        <p>Click "Try iy " to execute the displayDate() function.</p>   
+        <button id ="myBtn">Try it </button>
+        <div id="renklendir">
+        <p id="demo"></p></div>
+        <script>
+        document.getElementById("myBtn").onclick=displayDate;
+        function displayDate() {
+            document.getElementById("demo").innerHTML=Date();
+            
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+<h1 id = "id01">Old Heading</h1>
+<img id="myImage" src = "sad.png">
+<img id="myImage2" src = "sad.png">
+<script>
+    var element = document.getElementById("id01");
+    element.innerHTML="New Heading";
+   document.getElementById("myImage").src="smiley.png";
+//The HTML document above contains an <img> element with id="myImage"
+//We use the HTML DOM to get the element with id="myImage"
+//A JavaScript changes the src attribute of that element from 
+//"smiley.gif" to "landscape.jpg"
+
+</script>
+
+        
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#myDiv1, #myDiv2 {
+    background-color: coral;
+    padding: 50px;
+}
+#myP1, #myP2 {
+    background-color: white; 
+    font-size: 20px;
+    border: 1px solid;
+    padding: 20px;
+}
+</style>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+</head>
+<!--In bubbling the inner most element's event is handled first and then the outer:
+     the <p> element's click event is handled first, then the <div> element's click event.
+In capturing the outer most element's event is handled first and then the inner:
+ the <div> element's click event will be handled first, then the <p> element's click event.-->
+<body>
+
+<h2>JavaScript addEventListener()</h2>
+
+<div id="myDiv1">
+  <h2>Bubbling:</h2>
+  <p id="myP1">Click me!</p>
+</div><br>
+
+<div id="myDiv2">
+  <h2>Capturing:</h2>
+  <p id="myP2">Click me!</p>
+</div>
+
+<script>
+document.getElementById("myP1").addEventListener("click", function() {
+    alert("You clicked the white element!");
+}, false);
+
+document.getElementById("myDiv1").addEventListener("click", function() {
+    alert("You clicked the orange element!");
+}, false);
+
+document.getElementById("myP2").addEventListener("click", function() {
+    alert("You clicked the white element!");
+}, true);
+
+document.getElementById("myDiv2").addEventListener("click", function() {
+    alert("You clicked the orange element!");
+}, true);
+</script>
+
+</body>
+</html>

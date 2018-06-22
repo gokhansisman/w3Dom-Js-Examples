@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html> 
+    <head>      
+<script>
+function myFunction() {
+    var x = document.getElementById("fname");
+    x.value = x.value.toUpperCase();
+}
+function mOver(obj) {
+    obj.innerHTML = "Thank You"
+}
+
+function mOut(obj) {
+    obj.innerHTML = "Mouse Over Me"}
+function checkCookies() {
+                    var text = "";
+                    if (navigator.cookieEnabled == true) {
+                        text = "Cookies are enabled.";
+                    } else {
+                        text = "Cookies are not enabled.";
+                    }
+                    document.getElementById("demo").innerHTML = text;
+}
+</script>
+</head>
+<!--The onload and onunload events are
+     triggered when the user enters or leaves the page.-->
+<body onload="checkCookies()">
+    <p id="demo"></p>
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+    style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+    Mouse Over Me</div>
+Enter your name: <input type="text" id="fname" onchange="myFunction()">
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+</body>
+
+</html>

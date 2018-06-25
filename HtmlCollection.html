@@ -22,7 +22,8 @@ function myButton() {
         collection[i].style.color = "red";
         collection[i].style.backgroundColor = "white";
     }
-    var collection2=document.getElementsByTagName("h2");
+    //we can use querySelectorAll() too.
+    var collection2=document.querySelectorAll("h2");
     var i;
     for(i=0;i<collection2.length;i++) {
         collection2[i].style.color="white";

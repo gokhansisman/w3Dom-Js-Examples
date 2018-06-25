@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The Biggest Country in the world is Turkey!</h2>
+<p>Hello Turkey!</p>
+<h2>Istanbul</h2>
+<p>Hello Istanbul!</p>
+<h2>Ankara</h2>
+<p>Hello Ankara!</p>
+
+
+<p>Click the button to change the color of all p and h2 elements.</p>
+
+<button onclick="myButton()">Click Please!</button>
+
+<script>
+function myButton() {
+    var collection = document.getElementsByTagName("p");
+    var i;
+    for (i = 0; i < collection.length; i++) {
+        collection[i].style.color = "red";
+        collection[i].style.backgroundColor = "white";
+    }
+    var collection2=document.getElementsByTagName("h2");
+    var i;
+    for(i=0;i<collection2.length;i++) {
+        collection2[i].style.color="white";
+        collection2[i].style.backgroundColor="red";
+    }
+    
+}
+</script>
+
+</body>
+</html>

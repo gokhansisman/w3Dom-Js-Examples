@@ -24,6 +24,12 @@ value.appendChild(node);
 var element = document.getElementById("main");
 var children1 = document.getElementById("p1");
 element.insertBefore(value,children1);
+
+//MostCommonUse to delete 
+var children1 = document.getElementById("p1");
+children1.parentNode.removeChild(children1);
+//Beside , we can replace ;
+element.replaceChild(value,children1);
 </script>
     </body>
 </html>

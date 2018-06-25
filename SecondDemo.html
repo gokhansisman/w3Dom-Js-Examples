@@ -16,6 +16,14 @@ var y=x.getElementsByTagName("p");
 document.getElementById("demo").innerHTML=
 'The first paragraph (index 0) inside "main" is :' + y[1].innerHTML;
 //main id içinde ki p taglarını bir diziye aktarır.
+
+var value = document.createElement("p");
+var node  = document.createTextNode("Inserted between node and child.");
+value.appendChild(node);
+
+var element = document.getElementById("main");
+var children1 = document.getElementById("p1");
+element.insertBefore(value,children1);
 </script>
     </body>
 </html>
